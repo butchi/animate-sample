@@ -1,4 +1,4 @@
-kayac-html5-starter
+animate sample
 ====
 
 ## 事前に用意するもの

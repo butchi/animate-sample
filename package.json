@@ -1,10 +1,10 @@
 {
-  "name": "kayac-html5-starter",
-  "version": "0.0.0",
-  "description": "kayac-html5-starter development.",
+  "name": "animate-sample",
+  "version": "0.0.1",
+  "description": "Animate CC sample.",
   "main": "gulpfile.babel.js",
   "engines": {
-    "node": ">=5.0.0"
+    "node": ">=6.9.1"
   },
   "scripts": {
     "start": "gulp",
@@ -17,7 +17,7 @@
   "keywords": [
     "gulp"
   ],
-  "author": "Kayac Inc.",
+  "author": "IWABUCHI Yuuki",
   "license": "MIT",
   "devDependencies": {
     "babel": "6.3.*",
