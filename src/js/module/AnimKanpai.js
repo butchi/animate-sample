@@ -1,7 +1,7 @@
 import $ from 'jquery';
 
 const canvas = document.querySelector('.anim-kanpai');
-const stage = new createjs.Stage(canvas);
+const stage = new window.createjs.Stage(canvas);
 
 export default class AnimKanpai {
   constructor (opts = {}) {
@@ -387,5 +387,5 @@ if (loop == null) { loop = false; } this.initialize(mode,startPosition,loop,{});
 }).prototype = p = new cjs.MovieClip();
 p.nominalBounds = new cjs.Rectangle(94,339.8,556.8,96.2);
 
-})(lib = lib||{}, images = images||{}, createjs = createjs||{}, ss = ss||{});
+})(lib = lib||{}, images = images||{}, createjs = window.createjs||{}, ss = ss||{});
 var lib, images, createjs, ss;

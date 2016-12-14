@@ -9832,7 +9832,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 var canvas = document.querySelector('.anim-kanpai');
-var stage = new createjs.Stage(canvas);
+var stage = new window.createjs.Stage(canvas);
 
 var AnimKanpai = function () {
   function AnimKanpai() {
@@ -10192,7 +10192,7 @@ exports.default = AnimKanpai;
     this.timeline.addTween(cjs.Tween.get(this.instance_8).to({ x: 145 }, 9, cjs.Ease.get(-0.75)).to({ regX: 43.6, rotation: -15, x: 125.1, y: 180 }, 5).to({ x: 105.1, y: 190 }, 5).wait(41));
   }).prototype = p = new cjs.MovieClip();
   p.nominalBounds = new cjs.Rectangle(94, 339.8, 556.8, 96.2);
-})(lib = lib || {}, images = images || {}, createjs = createjs || {}, ss = ss || {});
+})(lib = lib || {}, images = images || {}, createjs = window.createjs || {}, ss = ss || {});
 var lib, images, createjs, ss;
 
 },{"jquery":1}],3:[function(require,module,exports){
