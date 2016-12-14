@@ -19,10 +19,10 @@ export default class AnimKanpai {
     ss = ss||{};
     var loader = new createjs.LoadQueue(false);
     loader.addEventListener("fileload", (evt) => {
-      handleFileLoad(evt);
+      this.handleFileLoad(evt);
     });
     loader.addEventListener("complete", (evt) => {
-      handleComplete(evt);
+      this.handleComplete(evt);
     });
     loader.loadManifest(lib.properties.manifest);
   }
@@ -35,11 +35,11 @@ export default class AnimKanpai {
     //This function is always called, irrespective of the content. You can use the variable "stage" after it is created in token create_stage.
     var queue = evt.target;
     var ssMetadata = lib.ssMetadata;
-    for(i=0; i<ssMetadata.length; i++) {
+    for(let i=0; i<ssMetadata.length; i++) {
       ss[ssMetadata[i].name] = new createjs.SpriteSheet( {"images": [queue.getResult(ssMetadata[i].name)], "frames": ssMetadata[i].frames} )
     }
-    exportRoot = new lib.kanpai();
-    stage.addChild(exportRoot); 
+    this.exportRoot = new lib.kanpai();
+    stage.addChild(this.exportRoot); 
     //Registers the "tick" event listener.
     createjs.Ticker.setFPS(lib.properties.fps);
     createjs.Ticker.addEventListener("tick", stage);      
