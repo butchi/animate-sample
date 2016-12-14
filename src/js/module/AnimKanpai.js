@@ -1,6 +1,6 @@
 import $ from 'jquery';
 
-const canvas = document.querySelector('.anim-kanpai');
+const canvas = document.querySelector('.anim-kanpai canvas');
 const stage = new window.createjs.Stage(canvas);
 
 export default class AnimKanpai {
