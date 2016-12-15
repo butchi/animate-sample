@@ -411,5 +411,5 @@ if (loop == null) { loop = false; } this.initialize(mode,startPosition,loop,{});
 }).prototype = p = new cjs.MovieClip();
 p.nominalBounds = new cjs.Rectangle(96.6,340.5,556.8,96.2);
 
-})(lib = lib||{}, images = images||{}, createjs = createjs||{}, ss = ss||{});
+})(lib = lib||{}, images = images||{}, createjs = window.createjs||{}, ss = ss||{});
 var lib, images, createjs, ss;
