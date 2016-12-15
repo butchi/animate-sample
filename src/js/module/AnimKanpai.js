@@ -406,7 +406,10 @@ if (loop == null) { loop = false; } this.initialize(mode,startPosition,loop,{});
   this.instance = new lib.mc();
   this.instance.setTransform(187.5,234.1,1,1,0,0,0,-2.6,45.9);
 
-  this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
+  let _this = this;
+  $(canvas).on('start-anim', (evt) => {
+    _this.timeline.addTween(cjs.Tween.get(_this.instance).wait(1));
+  });
 
 }).prototype = p = new cjs.MovieClip();
 p.nominalBounds = new cjs.Rectangle(96.6,340.5,556.8,96.2);
