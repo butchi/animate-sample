@@ -1,7 +1,7 @@
 import $ from 'jquery';
 
 const canvas = document.querySelector('.anim-kanpai');
-const stage = new createjs.Stage(canvas);
+const stage = new window.createjs.Stage(canvas);
 
 export default class AnimKanpai {
   constructor (opts = {}) {
@@ -35,7 +35,7 @@ export default class AnimKanpai {
     //This function is always called, irrespective of the content. You can use the variable "stage" after it is created in token create_stage.
     var queue = evt.target;
     var ssMetadata = lib.ssMetadata;
-    for(i=0; i<ssMetadata.length; i++) {
+    for(let i=0; i<ssMetadata.length; i++) {
       ss[ssMetadata[i].name] = new createjs.SpriteSheet( {"images": [queue.getResult(ssMetadata[i].name)], "frames": ssMetadata[i].frames} )
     }
     this.exportRoot = new lib.kanpai();
