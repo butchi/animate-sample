@@ -324,6 +324,7 @@ if (loop == null) { loop = false; } this.initialize(mode,startPosition,loop,{});
 
   // timeline functions:
   this.frame_19 = function() {
+    $(canvas).trigger('end-anim');
     stop();
   }
 
