@@ -93,7 +93,7 @@ lib.properties = {
   opacity: 1.00,
   webfonts: {},
   manifest: [
-    {src:"images/kanpai_atlas_.png", id:"kanpai_atlas_"}
+    {src:"img/sprite-kanpai.png", id:"kanpai_atlas_"}
   ]
 };
 
