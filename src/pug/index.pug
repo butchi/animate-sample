@@ -5,7 +5,9 @@ prepend ConfigBlock
 
 //- append StylesheetBlock
 
-//- append JavascriptBlock
-
 block ContentBlock
-  | hello, world!
+  .kanpai.
+    <canvas class="anim-kanpai" width="375" height="375" style="display: block; background-color:rgba(255, 255, 255, 1.00)"></canvas>
+
+prepend JavascriptBlock
+  script(src="https://code.createjs.com/createjs-2015.11.26.min.js")

@@ -1,10 +1,4 @@
-import Sample from './lib/Sample';
 import $ from 'jquery';
+import AnimKanpai from './module/AnimKanpai';
 
-const sample = new Sample({
-    name: 'world'
-});
-
-$('.wrapper').on('click', () => {
-    console.log(`hello, ${sample.name}.`);
-});
+let animKanpai = new AnimKanpai();
