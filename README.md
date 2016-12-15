@@ -1,8 +1,8 @@
-kayac-html5-starter
+animate-sample
 ====
 
 ## 事前に用意するもの
-- node.js (version 5.0.0以上)
+- node.js (version 6.9.1以上)
 
 ## 環境構築
 ```
