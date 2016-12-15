@@ -9853,16 +9853,16 @@ var AnimKanpai = function () {
   }, {
     key: 'init',
     value: function init() {
-      var _this = this;
+      var _this2 = this;
 
       images = images || {};
       ss = ss || {};
       var loader = new createjs.LoadQueue(false);
       loader.addEventListener("fileload", function (evt) {
-        _this.handleFileLoad(evt);
+        _this2.handleFileLoad(evt);
       });
       loader.addEventListener("complete", function (evt) {
-        _this.handleComplete(evt);
+        _this2.handleComplete(evt);
       });
       loader.loadManifest(lib.properties.manifest);
     }
@@ -10133,6 +10133,7 @@ exports.default = AnimKanpai;
 
     // timeline functions:
     this.frame_19 = function () {
+      (0, _jquery2.default)(canvas).trigger('end-anim');
       stop();
     };
 
@@ -10214,7 +10215,10 @@ exports.default = AnimKanpai;
     this.instance = new lib.mc();
     this.instance.setTransform(187.5, 234.1, 1, 1, 0, 0, 0, -2.6, 45.9);
 
-    this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
+    var _this = this;
+    (0, _jquery2.default)(canvas).on('start-anim', function (evt) {
+      _this.timeline.addTween(cjs.Tween.get(_this.instance).wait(1));
+    });
   }).prototype = p = new cjs.MovieClip();
   p.nominalBounds = new cjs.Rectangle(96.6, 340.5, 556.8, 96.2);
 })(lib = lib || {}, images = images || {}, createjs = window.createjs || {}, ss = ss || {});
@@ -10234,5 +10238,13 @@ var _AnimKanpai2 = _interopRequireDefault(_AnimKanpai);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var animKanpai = new _AnimKanpai2.default();
+
+animKanpai.$elm.on('end-anim', function (evt) {
+  console.log('end anim.');
+});
+
+setTimeout(function () {
+  animKanpai.$elm.trigger('start-anim');
+}, 2000);
 
 },{"./module/AnimKanpai":2,"jquery":1}]},{},[3]);
